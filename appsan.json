@@ -1,0 +1,7 @@
+{
+  "name": "My App",
+  "version": "1.0",
+  "miniAppId": "app:username:myapp",
+  "main": "app.xml.appsan",
+  "description": ""
+}
