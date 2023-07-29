@@ -1,1 +1,3 @@
 <include layout="pages/list/list.xml.appsan"/>
+<include layout="pages/estelam-melk/melk.xml.appsan"/>
+<include layout="pages/estelam-daftar/daftar.xml.appsan"/>

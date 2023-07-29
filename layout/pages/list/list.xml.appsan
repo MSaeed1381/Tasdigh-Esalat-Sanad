@@ -3,19 +3,19 @@
     <frame weightsum="1" layout="linear_horizontal" gravity="center" reverse="true" margin="16"
            background="white" elevation="2" borderCornerRadius="2">
         <img width="40" height="40" scaleType="center_inside" src="images/tasdigh.png"/>
-        <text width="wrap_content" textsize="16" weight="1" textcolor="#1C4B78" padding_bottom="4" margin_right="8" textalignment="right" text="فهرست املاک"/>
+        <text width="wrap_content" textsize="16" weight="1" textcolor="#1C4B78" padding_bottom="4" margin_right="8" textalignment="right" text="تصدیق اصالت سند"/>
         <img width="25" height="25" margin_left="16" scaleType="center_inside" src="images/alert-circle.png"/>
 
     </frame>
 
-    <text margin_right="16" margin_left="16" margin_top="24" margin_bottom="24" textalignment="right" text="خدمت مورد نظر را انتخاب کنید."/>
+    <text margin_right="16" margin_left="16" margin_top="24" margin_bottom="24" textalignment="right" text="نوع سند مورد نظر را انتخاب کنید"/>
 
 
     <frame weightsum="1" layout="linear_horizontal" gravity="center" reverse="true" margin_right="16" margin_left="16"
            margin_top="12" margin_bottom="12" onclick="page/melk-form"
            background="white" elevation="1" borderCornerRadius="2">
         <img width="40" height="40" margin_right="16" scaleType="center_inside" src="images/service-icon-user.png"/>
-        <text width="wrap_content" weight="1" textsize="14" textcolor="#616161" padding_bottom="4" margin_right="8" textalignment="right" text="فهرست املاک"/>
+        <text width="wrap_content" weight="1" textsize="14" textcolor="#616161" padding_bottom="4" margin_right="8" textalignment="right" text="ملک"/>
         <img width="25" height="25" scaleType="center_inside" src="images/chevron-left.png"/>
 
     </frame>
@@ -24,11 +24,9 @@
            margin_top="12" margin_bottom="12" onclick="page/daftar-form"
            background="white" elevation="1" borderCornerRadius="2">
         <img width="40" height="40" margin_right="16" scaleType="center_inside" src="images/tasdigh.png"/>
-        <text width="wrap_content" weight="1" textsize="14" textcolor="#616161" padding_bottom="4" margin_right="8" textalignment="right" text="فهرست املاک"/>
+        <text width="wrap_content" weight="1" textsize="14" textcolor="#616161" padding_bottom="4" margin_right="8" textalignment="right" text="اسناد اوراق دفاتر رسمی"/>
         <img width="25" height="25" scaleType="center_inside" src="images/chevron-left.png"/>
 
     </frame>
 </page>
 
-<include layout="pages/estelam-melk/melk.xml.appsan"/>
-<include layout="pages/estelam-daftar/daftar.xml.appsan"/>
