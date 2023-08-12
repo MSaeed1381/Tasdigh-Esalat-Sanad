@@ -1,7 +1,7 @@
 {
-  "name": "My App",
-  "version": "1.0",
-  "miniAppId": "app:username:myapp",
+  "name": "Sabt Tasdigh Sanad",
+  "version": "1.0.2",
+  "miniAppId": "app:admin:sabt-tasdigh-sanad",
   "main": "app.xml.appsan",
   "description": ""
 }

@@ -1,0 +1,31 @@
+<bottomsheetdialog id="dialog-ostan"
+                   padding_top="24"
+                   padding_right="16"
+                   padding_left="16"
+                   padding_bottom="24"
+                   borderCornerRadius="12">
+    <text
+            width="match_parent"
+            height="32"
+            text="استان مورد نظر خود را انتخاب کنید."
+            gravity="center_right"
+            textsize="20"
+            textcolor="#2E2E2E"
+            textalignment="right"
+            margin_bottom="16"
+    />
+
+    <frame layout="linear_vertical">
+        <frame layout="linear_horizontal" padding_right="12" padding_left="12" padding_top="16" padding_bottom="16"
+               weightsum="1" reverse="true" borderColor="#E0E0E0"
+               borderCornerRadius="4dp" borderStrokeWidth="1" background="white">
+            <img width="24" height="24" scaleType="fit_xy" margin_right="10" src="images/search.png"/>
+            <textinput text="جستجو..." textcolor="#ADADAD" background="transparent"
+                       textalignment="right" gravity="right"  weight="1"/>
+        </frame>
+    </frame>
+
+
+    <text height="28" margin="10" width="match_parent" gravity="right" textalignment="right" text="آذربایجان شرقی" onclick="app/closeDialog"/>
+    <text height="28" margin="10" width="match_parent" gravity="right" textalignment="right" text="آذربایجان  غربی" onclick="app/closeDialog"/>
+</bottomsheetdialog>

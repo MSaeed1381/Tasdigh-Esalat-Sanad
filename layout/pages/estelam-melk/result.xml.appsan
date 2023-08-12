@@ -1,0 +1,149 @@
+<page id="result">
+    <frame layout="frame" width="match_parent" gravity="right">
+        <imagebutton width="24" height="24" selfgravity="right" background="#4ca9bf" src="images/x.png"
+        onclick="app/back"/>
+    </frame>
+    <text text="استعلام" gravity="right" textsize="20" textcolor="#2E2E2E"/>
+
+    <frame layout="linear_vertical"  borderStrokeWidth="1" borderColor="#E0E0E0"
+           borderCornerRadius="6">
+            <frame layout="linear_horizontal" weightsum="1" reverse="true">
+                <text gravity="right" textalignment="right" text="مشخصات مالک" width="wrap_content" weight="1"
+                      textcolor="#474747" textsize="16"/>
+                <imagebutton width="24" height="24" src="images/chevron-down.png"/>
+            </frame>
+
+            <frame margin_top="12" layout="linear_horizontal" weightsum="2" reverse="true">
+
+                <frame margin_top="12" childgravity="right" layout="linear_vertical">
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                          textcolor="#616161" textsize="14" text="نام:"/>
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                          textcolor="#2E2E2E" textsize="14" text="داور" />
+
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                          textcolor="#616161" textsize="14" text="نام پدر" margin_top="16"/>
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                          textcolor="#2E2E2E" textsize="14" text="حسن" />
+
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                          textcolor="#616161" textsize="14" text="شماره شناسنامه:" margin_top="16"/>
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                          textcolor="#2E2E2E" textsize="14" text="۱۵۰۱۱۴۲۴۲" />
+
+                </frame>
+
+                <frame margin_top="12" layout="linear_vertical" gravity="top_right">
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                          textcolor="#616161" textsize="14" text="نام خانوادگی:"/>
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                    textcolor="#2E2E2E" textsize="14" text="امجدی"/>
+
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right" margin_top="16"
+                          textcolor="#616161" textsize="14" text="کدملی:"/>
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                    textcolor="#2E2E2E" textsize="14" text="۱۵۰۱۱۴۲۴۲"/>
+
+                </frame>
+            </frame>
+    </frame>
+
+
+    <frame layout="linear_vertical"  borderStrokeWidth="1" borderColor="#E0E0E0"
+           borderCornerRadius="6">
+            <frame layout="linear_horizontal" weightsum="1" reverse="true">
+                <text gravity="right" textalignment="right" text="مشخصات ملک" width="wrap_content" weight="1"
+                      textcolor="#474747" textsize="16"/>
+                <imagebutton width="24" height="24" src="images/chevron-down.png"/>
+            </frame>
+
+            <frame margin_top="12" layout="linear_horizontal" weightsum="2" reverse="true">
+
+                <frame margin_top="12" childgravity="right" layout="linear_vertical">
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                          textcolor="#616161" textsize="14" text="شماره فرعی:"/>
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                          textcolor="#2E2E2E" textsize="14" text="۱۲۳" />
+
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                          textcolor="#616161" textsize="14" text="مفروز و مجزا از:" margin_top="16"/>
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                          textcolor="#2E2E2E" textsize="14" text="-----" />
+
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                          textcolor="#616161" textsize="14" text="بخش ثبتی:" margin_top="16"/>
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                          textcolor="#2E2E2E" textsize="14" text="-----" />
+
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                          textcolor="#616161" textsize="14" text="مساحت:" margin_top="16"/>
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                          textcolor="#2E2E2E" textsize="14" text="-----" />
+
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                          textcolor="#616161" textsize="14" text="سمت:" margin_top="16"/>
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                          textcolor="#2E2E2E" textsize="14" text="-----" />
+
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                          textcolor="#616161" textsize="14" text="بها:" margin_top="16"/>
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                          textcolor="#2E2E2E" textsize="14" text="-----" />
+
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                          textcolor="#616161" textsize="14" text="وضعیت خاص:" margin_top="16"/>
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                          textcolor="#2E2E2E" textsize="14" text="-----" />
+
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                          textcolor="#616161" textsize="14" text="نوع سند:" margin_top="16"/>
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                          textcolor="#2E2E2E" textsize="14" text="-----" />
+
+                </frame>
+
+                <frame margin_top="12" layout="linear_vertical" gravity="top_right">
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                          textcolor="#616161" textsize="14" text="شماره اصلی:"/>
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                    textcolor="#2E2E2E" textsize="14" text="۱۳۹۵۹۳۲۵۱۱۲۱۰۰۰۰۳۹"/>
+
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right" margin_top="16"
+                          textcolor="#616161" textsize="14" text="قطعه:"/>
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                    textcolor="#2E2E2E" textsize="14" text="-----"/>
+
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right" margin_top="16"
+                          textcolor="#616161" textsize="14" text="ناحیه:"/>
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                    textcolor="#2E2E2E" textsize="14" text="-----"/>
+
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right" margin_top="16"
+                          textcolor="#616161" textsize="14" text="بلوک:"/>
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                    textcolor="#2E2E2E" textsize="14" text="-----"/>
+
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right" margin_top="16"
+                          textcolor="#616161" textsize="14" text="طبقه:"/>
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                    textcolor="#2E2E2E" textsize="14" text="۲"/>
+
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right" margin_top="16"
+                          textcolor="#616161" textsize="14" text="نوع ملک:"/>
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                    textcolor="#2E2E2E" textsize="14" text="-----"/>
+
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right" margin_top="16"
+                          textcolor="#616161" textsize="14" text="کاربری:"/>
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                    textcolor="#2E2E2E" textsize="14" text="-----"/>
+
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right" margin_top="16"
+                          textcolor="#616161" textsize="14" text="محدودیت:"/>
+                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                    textcolor="#2E2E2E" textsize="14" text="رهنی"/>
+
+                </frame>
+            </frame>
+    </frame>
+</page>
