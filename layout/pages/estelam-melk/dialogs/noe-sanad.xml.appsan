@@ -15,6 +15,6 @@
             margin_bottom="16"
     />
 
-    <text height="28" width="match_parent" gravity="right" textalignment="right" text="جدید" onclick="app/closeDialog"/>
-    <text height="28" width="match_parent" gravity="right" textalignment="right" text="قدیم" onclick="app/closeDialog"/>
+    <text height="28" width="match_parent" gravity="right" textalignment="right" text="جدید" onclick="app/result:{text: 'جدید'};app/closeDialog"/>
+    <text height="28" width="match_parent" gravity="right" textalignment="right" text="قدیم" onclick="app/result:{text: 'قدیم'};app/closeDialog"/>
 </bottomsheetdialog>

@@ -1,0 +1,17 @@
+<script id="melk-script">
+    function updateOstan(data) {
+        console.log(data)
+        Appsan.setProperty("txtOstan", "text", data.text)
+        Appsan.setProperty("txtOstan", "textcolor", 'black')
+    }
+
+    function updateVahed(data) {
+        Appsan.setProperty("txtVahed", "text", data.text.replace('\n', ''))
+        Appsan.setProperty("txtVahed", "textcolor", 'black')
+    }
+
+    function updateNo(data) {
+        Appsan.setProperty("txtNo", "text", data.text.replace('\n', ''))
+        Appsan.setProperty("txtNo", "textcolor", 'black')
+    }
+</script>

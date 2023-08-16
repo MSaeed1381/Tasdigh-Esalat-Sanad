@@ -18,7 +18,7 @@
     <frame layout="linear_vertical">
         <frame layout="linear_horizontal" padding_right="12" padding_left="12" padding_top="16" padding_bottom="16"
                weightsum="1" reverse="true" borderColor="#E0E0E0"
-               borderCornerRadius="4dp" borderStrokeWidth="1" background="white">
+               borderCornerRadius="4" borderStrokeWidth="1" background="white">
             <img width="24" height="24" scaleType="fit_xy" margin_right="10" src="images/search.png"/>
             <textinput text="جستجو..." textcolor="#ADADAD" background="transparent"
                        textalignment="right" gravity="right"  weight="1"/>
@@ -26,8 +26,8 @@
     </frame>
 
 
-    <text height="28" width="match_parent" margin_top="16" margin_bottom="16" gravity="right" textalignment="right" text="حوزه ثبت ملک آذرشهر" onclick="app/closeDialog"/>
-    <text height="28" width="match_parent" margin_top="16" margin_bottom="16" gravity="right" textalignment="right" text="حوزه ثبت ملک اهر" onclick="app/closeDialog"/>
-    <text height="28" width="match_parent" margin_top="16" margin_bottom="16" gravity="right" textalignment="right" text="حوزه ثبت ملک ایلخچی" onclick="app/closeDialog"/>
-    <text height="28" width="match_parent" margin_top="16" margin_bottom="16" gravity="right" textalignment="right" text="حوزه ثبت ملک اسکو" onclick="app/closeDialog"/>
+    <text height="28" width="match_parent" margin_top="16" margin_bottom="16" gravity="right" textalignment="right" text="حوزه ثبت ملک آذرشهر" onclick="app/result:{text: 'حوزه ثبت ملک آذرشهر'};app/closeDialog"/>
+    <text height="28" width="match_parent" margin_top="16" margin_bottom="16" gravity="right" textalignment="right" text="حوزه ثبت ملک اهر" onclick="app/result:{text: 'حوزه ثبت ملک اهر'};app/closeDialog"/>
+    <text height="28" width="match_parent" margin_top="16" margin_bottom="16" gravity="right" textalignment="right" text="حوزه ثبت ملک ایلخچی" onclick="app/result:{text: 'حوزه ثبت ملک ایلخچی'};app/closeDialog"/>
+    <text height="28" width="match_parent" margin_top="16" margin_bottom="16" gravity="right" textalignment="right" text="حوزه ثبت ملک اسکو" onclick="app/result:{text: 'حوزه ثبت ملک اسکو'};app/closeDialog"/>
 </bottomsheetdialog>
