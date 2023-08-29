@@ -1,98 +1,136 @@
-<page id="melk-form" layout="linear_vertical">
-
-    <frame weightsum="1" layout="linear_horizontal" gravity="center" reverse="true" margin="16"
-           background="white" elevation="2" borderCornerRadius="2">
-        <img width="40" height="40" scaleType="center_inside" src="images/tasdigh.png"/>
-        <text width="wrap_content" textsize="16" weight="1" textcolor="#1C4B78" padding_bottom="4" margin_right="8"
-              textalignment="right" text="تصدیق اصالت سند"/>
-        <img width="25" height="25" margin_left="16" scaleType="center_inside" src="images/alert-circle.png"/>
-
-    </frame>
-
-    <text margin_right="16" margin_left="16" margin_top="24" margin_bottom="24" textalignment="right" text="استعلام"/>
-
-
-    <frame layout="linear_vertical">
-        <text textsize="14" textcolor="#7A7A7A" textalignment="right" gravity="right"
-              textstyle="bold" text="استان"/>
-        <frame layout="linear_horizontal" height="60" gravity="center_vertical" childgravity="center_vertical" padding_right="12" padding_left="12" padding_top="16" padding_bottom="16"
-               weightsum="1" reverse="true" borderColor="#E0E0E0" onclick="dialog/dialog-ostan->script/melk-script:updateOstan($data)"
-               borderCornerRadius="4" borderStrokeWidth="1" background="white">
-            <text id="txtOstan" text="استان مورد نظر را انتخاب کنید" textcolor="#ADADAD" height="40"
-                  textalignment="right" gravity="right"  weight="1" margin="0" padding="0"/>
-            <img width="24" height="24" src="images/chevron-down.png" margin="0"/>
-        </frame>
-    </frame>
-
-    <frame layout="linear_vertical">
-        <text textsize="14" textcolor="#7A7A7A" textalignment="right" gravity="right"
-              textstyle="bold" text="واحد ثبتی"/>
-        <frame layout="linear_horizontal" padding_right="12" padding_left="12"
-               weightsum="1" reverse="true" borderColor="#E0E0E0" onclick="dialog/dialog-vahed->script/melk-script:updateVahed($data)" height="60"
-               gravity="center_vertical" childgravity="center_vertical"
-               borderCornerRadius="4" borderStrokeWidth="1" background="white">
-            <text id="txtVahed" text="واحد ثبتی مورد نظر را انتخاب کنید" textcolor="#ADADAD"
-                  textalignment="right" gravity="right"  weight="1" margin="0" padding="0"/>
-            <img width="24" height="24" src="images/chevron-down.png"/>
-        </frame>
-    </frame>
-
-
-
-    <frame layout="linear_vertical">
-        <text textsize="14" textcolor="#7A7A7A" textalignment="right" gravity="right"
-              textstyle="bold" text="کد ملی/ شناسه ملی"/>
-        <frame layout="linear_horizontal" padding_right="12" padding_left="12"
-               weightsum="1" reverse="true" borderColor="#E0E0E0" height="60"
-               gravity="center_vertical" childgravity="center_vertical"
-               borderCornerRadius="4" borderStrokeWidth="1" background="white">
-            <textinput hint="کد ملی مورد نظر را  وارد کنید" hintcolor="#ADADAD" background="transparent"
-                  textalignment="right" gravity="right"  weight="1" margin="0"/>
-        </frame>
-    </frame>
-
-    <frame layout="linear_vertical">
-        <text textsize="14" textcolor="#7A7A7A" textalignment="right" gravity="right"
-              textstyle="bold" text="اصلی"/>
-        <frame layout="linear_horizontal" padding_right="12" padding_left="12"
-               weightsum="1" reverse="true" borderColor="#E0E0E0" height="60"
-               gravity="center_vertical" childgravity="center_vertical"
-               borderCornerRadius="4" borderStrokeWidth="1" background="white">
-            <textinput hint="شماره ی اصلی سند مورد نظر را وارد کنید" hintcolor="#ADADAD" background="transparent"
-                       gravity="center_right" childgravity="center_vertical"
-                  textalignment="right"  weight="1" margin="0"/>
-        </frame>
-    </frame>
-
-    <frame layout="linear_vertical">
-        <text textsize="14" textcolor="#7A7A7A" textalignment="right" gravity="right"
-              textstyle="bold" text="فرعی (اختیاری)"/>
-        <frame layout="linear_horizontal" padding_right="12" padding_left="12"
-               weightsum="1" reverse="true" borderColor="#E0E0E0" height="60"
-               gravity="center_vertical" childgravity="center_vertical"
-               borderCornerRadius="4" borderStrokeWidth="1" background="white">
-            <textinput hint="شماره ی فرعی سند مورد نظر را وارد کنید" hintcolor="#ADADAD" background="transparent"
-                  textalignment="right" gravity="right"  weight="1" margin="0"/>
-        </frame>
-    </frame>
-
-    <frame layout="linear_vertical">
-        <text textsize="14" textcolor="#7A7A7A" textalignment="right" gravity="right"
-              textstyle="bold" text="نوع سند"/>
-        <frame layout="linear_horizontal" padding_right="12" padding_left="12" padding_top="16" padding_bottom="16"
-               weightsum="1" reverse="true" borderColor="#E0E0E0" onclick="dialog/dialog-noe-sanad->script/melk-script:updateNo($data)"
-               gravity="center_vertical" childgravity="center_vertical" height="60"
-               borderCornerRadius="4" borderStrokeWidth="1" background="white">
-            <text id="txtNo" text="شماره ی فرعی سند مورد نظر را وارد کنید" textcolor="#ADADAD"
-                  textalignment="right" gravity="right"  weight="1" margin="0"/>
-            <img width="24" height="24" src="images/chevron-down.png"/>
-        </frame>
-    </frame>
-
-    <button height="48" margin_top="17" margin_right="10" margin_left="10" onclick="page/result"
-            width="match_parent" text="تایید" textcolor="white" background="#4ca9bf"/>
-
+<page title="" id="melk" layout="linear_vertical" background="#FAFAFA" scrollable="false" height="match_parent" width="match_parent">
     <include layout="pages/estelam-melk/melk.js.appsan"/>
+
+
+    <frame layout="linear_vertical" margin="0" padding="0" weightsum="1" height="match_parent">
+        <frame layout="linear_vertical" margin="0" weight="1" padding_top="0" padding_right="16" padding_left="16" padding_bottom="16" height="match_parent" weightsum="1">
+            <frame weightsum="1" layout="linear_horizontal" gravity="center" reverse="true" margin="0"
+                   background="white" elevation="2" borderCornerRadius="4" padding="16">
+
+                <img width="40" height="40" scaleType="fit_center" src="images/tasdigh.png" gravity="top_center"
+                     selfgravity="top_center"/>
+
+                <frame layout="linear_vertical" margin="0" padding="0" weight="1" gravity="center_right"
+                       selfgravity="center_right" height="match_parent" margin_right="8">
+
+                    <text width="wrap_content" textsize="16" textcolor="#1C4B78" margin_bottom="2"
+                          textalignment="right" text="تصدیق اصالت سند" margin="0" padding="0"/>
+
+                    <text width="wrap_content" textsize="10" textcolor="#7A7A7A"
+                          textalignment="right" text="املاک و کاداستر/  تصدیق اصالت سند" margin="0" padding="0"/>
+                </frame>
+                <img width="24" height="24" margin_left="16" scaleType="fit_center" src="images/alert-circle.png" gravity="top_center"
+                     selfgravity="top_center"/>
+            </frame>
+
+            <frame layout="linear_vertical" margin="0" padding="0" scrollable="true" weight="1" height="match_parent"
+                   >
+                <text textcolor="#2E2E2E" textsize="16" margin_top="24" margin_bottom="24" margin="0" padding="0"
+                      textalignment="right" text="استعلام"/>
+
+
+                <frame layout="linear_vertical" margin="0" padding="0">
+                    <text textsize="14" textcolor="#7A7A7A" textalignment="right" gravity="right"
+                          text="استان" margin="0" padding="0" margin_bottom="8"/>
+
+                    <frame layout="linear_horizontal" height="wrap_content" gravity="center_vertical" childgravity="center_vertical"
+                           padding_right="12" padding_left="12" padding_top="16" padding_bottom="16" margin="0"
+                           weightsum="1" reverse="true" borderColor="#E0E0E0" onclick="dialog/dialog-ostan->script/melk-script:updateOstan($data)"
+                           borderCornerRadius="4" borderStrokeWidth="0.5" background="white">
+
+                        <text id="txtOstan" text="استان مورد نظر را انتخاب کنید" textcolor="#ADADAD" height="wrap_content"
+                              textalignment="right" gravity="right"  weight="1" margin="0" padding_top="4" padding_bottom="4" padding="0" textsize="12"/>
+
+                        <img width="20" height="20" scaleType="fit_center" src="images/chevron-down.png" margin="0" padding="0"/>
+                    </frame>
+                </frame>
+
+
+                <frame layout="linear_vertical" margin="0" padding="0" margin_top="16">
+                    <text textsize="14" textcolor="#7A7A7A" textalignment="right" gravity="right"
+                          text="واحد ثبتی" margin="0" padding="0" margin_bottom="8"/>
+
+                    <frame layout="linear_horizontal" height="wrap_content" gravity="center_vertical" childgravity="center_vertical"
+                           padding_right="12" padding_left="12" padding_top="16" padding_bottom="16" margin="0"
+                           weightsum="1" reverse="true" borderColor="#E0E0E0" onclick="dialog/dialog-vahed->script/melk-script:updateVahed($data)"
+                           borderCornerRadius="4" borderStrokeWidth="0.5" background="white">
+
+                        <text id="txtVahed" text="واحد ثبتی مورد نظر را انتخاب کنید" padding_top="4" padding_bottom="4" textcolor="#ADADAD" height="wrap_content"
+                              textalignment="right" gravity="right"  weight="1" margin="0" padding="0" textsize="12"/>
+
+                        <img width="20" height="20" scaleType="fit_center" src="images/chevron-down.png" margin="0" padding="0"/>
+                    </frame>
+                </frame>
+
+
+
+                <frame layout="linear_vertical" margin="0" padding="0" margin_top="16">
+                    <text textsize="14" textcolor="#7A7A7A" textalignment="right" gravity="right" margin="0" padding="0"
+                          text="کد ملی/ شناسه ملی" margin_bottom="8"/>
+                    <frame layout="linear_horizontal" padding_right="12" padding_left="12" padding_bottom="16" padding_top="16"
+                           borderColor="#E0E0E0" height="wrap_content" margin="0"
+                           gravity="center_vertical" childgravity="center_vertical"
+                           borderCornerRadius="4" borderStrokeWidth="0.5" background="white">
+
+                        <textinput hint="کد ملی مورد نظر را  وارد کنید" padding_top="4" padding_bottom="4" hintcolor="#ADADAD" background="transparent" inputtype="number"
+                                   textalignment="right" gravity="right"  margin="0" padding="0" textsize="12"/>
+                    </frame>
+                </frame>
+
+                <frame layout="linear_vertical" margin="0" padding="0" margin_top="16">
+                    <text textsize="14" textcolor="#7A7A7A" textalignment="right" gravity="right" margin="0" padding="0"
+                          text="اصلی" margin_bottom="8"/>
+                    <frame layout="linear_horizontal" padding_right="12" padding_left="12" padding_top="16" padding_bottom="16"
+                           weightsum="1" reverse="true" borderColor="#E0E0E0" height="wrap_content" margin="0"
+                           gravity="center_vertical" childgravity="center_vertical"
+                           borderCornerRadius="4" borderStrokeWidth="0.5" background="white">
+
+                        <textinput padding_top="4" padding_bottom="4" hint="شماره ی اصلی سند مورد نظر را وارد کنید" hintcolor="#ADADAD" background="transparent"
+                                   gravity="center_right" childgravity="center_vertical" inputtype="number"
+                                   textalignment="right"  weight="1" margin="0" textsize="12" padding="0"/>
+                    </frame>
+                </frame>
+
+                <frame layout="linear_vertical" margin="0" padding="0" margin_top="16">
+                    <text textsize="14" textcolor="#7A7A7A" textalignment="right" gravity="right"
+                          textstyle="bold" text="فرعی (اختیاری)" margin="0" padding="0" margin_bottom="8"/>
+
+                    <frame layout="linear_horizontal" padding_right="12" padding_left="12" padding_top="16" padding_bottom="16"
+                           weightsum="1" reverse="true" borderColor="#E0E0E0" height="wrap_content" margin="0"
+                           gravity="center_vertical" childgravity="center_vertical"
+                           borderCornerRadius="4" borderStrokeWidth="0.5" background="white">
+                        <textinput padding_top="4" padding_bottom="4" hint="شماره ی فرعی سند مورد نظر را وارد کنید" hintcolor="#ADADAD" background="transparent" inputtype="number"
+                                   textalignment="right" gravity="right"  weight="1" margin="0" textsize="12" padding="0"/>
+                    </frame>
+                </frame>
+
+                <frame layout="linear_vertical" margin="0" padding="0" margin_top="16" margin_bottom="16">
+                    <text textsize="14" textcolor="#7A7A7A" textalignment="right" gravity="right"
+                          text="نوع سند" margin="0" padding="0" margin_bottom="8"/>
+
+                    <frame layout="linear_horizontal" height="wrap_content" gravity="center_vertical" childgravity="center_vertical"
+                           padding_right="12" padding_left="12" padding_top="16" padding_bottom="16" margin="0"
+                           weightsum="1" reverse="true" borderColor="#E0E0E0" onclick="dialog/dialog-noe-sanad->script/melk-script:updateNo($data)"
+                           borderCornerRadius="4" borderStrokeWidth="0.5" background="white">
+
+                        <text padding_top="4" padding_bottom="4" id="txtNo" text="شماره ی فرعی سند مورد نظر را وارد کنید" textcolor="#ADADAD" height="wrap_content"
+                              textalignment="right" gravity="right"  weight="1" margin="0" padding="0" textsize="12"/>
+
+                        <img width="20" height="20" scaleType="fit_center" src="images/chevron-down.png" margin="0" padding="0"/>
+                    </frame>
+                </frame>
+            </frame>
+        </frame>
+
+        <frame layout="frame" margin="0" padding="16" background="white">
+            <button height="wrap_content" onclick="page/dafter-result" textsize="14"
+                    width="match_parent" text="تایید" textcolor="white" background="#4ca9bf"
+                    borderCornerRadius="4" gravity="center" selfgravity="center"/>
+        </frame>
+    </frame>
+
+
+
 </page>
 
 <include layout="pages/estelam-melk/dialogs/noe-sanad.xml.appsan"/>

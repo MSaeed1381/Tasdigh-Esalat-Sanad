@@ -3,18 +3,42 @@
                    padding_right="16"
                    padding_left="16"
                    padding_bottom="24"
-                   borderCornerRadius="12">
-    <text
-            width="match_parent"
-            height="32"
-            text="نوع سند مورد نظر را انتخاب کنید"
-            gravity="center_right"
-            textsize="20"
-            textcolor="#2E2E2E"
-            textalignment="right"
-            margin_bottom="16"
-    />
+                   margin="0"
+                   background="white"
+                   borderCornerRadius="4" height="match_parent" width="match_parent">
 
-    <text height="28" width="match_parent" gravity="right" textalignment="right" text="جدید" onclick="app/result:{text: 'جدید'};app/closeDialog"/>
-    <text height="28" width="match_parent" gravity="right" textalignment="right" text="قدیم" onclick="app/result:{text: 'قدیم'};app/closeDialog"/>
+    <frame height="match_parent" width="match_parent" layout="linear_vertical" scrollable="true" margin="0" padding="0">
+        <frame height="match_parent" width="match_parent" layout="linear_vertical" margin="0" padding="0">
+            <text
+                    width="match_parent"
+                    text="نوع سند مورد نظر را انتخاب کنید"
+                    gravity="center_right"
+                    textsize="14"
+                    textcolor="#2E2E2E"
+                    textalignment="right"
+                    margin_bottom="16"
+            />
+
+            <frame layout="linear_vertical" margin="0" padding="0" scrollable="true">
+                <frame layout="linear_horizontal" padding_right="6" padding_left="6" padding_top="8" padding_bottom="8"
+                       weightsum="1" reverse="true" borderColor="#E0E0E0"
+                       borderCornerRadius="2" borderStrokeWidth="0.5" background="white">
+                    <img width="24" height="24" scaleType="fit_center" margin_right="8" src="images/search.png"/>
+                    <textinput textsize="12" hint="جستجو..." textcolor="#ADADAD" background="transparent"
+                               textalignment="right" gravity="right"  weight="1"/>
+                </frame>
+            </frame>
+
+
+        </frame>
+
+        <frame layout="linear_vertical" margin="0" padding="0" margin_top="16">
+
+            <text textcolor="#616161" height="28" textsize="12" width="match_parent" gravity="right" textalignment="right" text="جدید" onclick="app/result:{text: 'جدید'};app/closeDialog"/>
+            <divider color="#E0E0E0" size="1" />
+            <text textcolor="#616161" height="28" textsize="12" width="match_parent" gravity="right" textalignment="right" text="قدیم" onclick="app/result:{text: 'قدیم'};app/closeDialog"/>
+
+        </frame>
+
+    </frame>
 </bottomsheetdialog>

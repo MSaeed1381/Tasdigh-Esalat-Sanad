@@ -3,31 +3,46 @@
                    padding_right="16"
                    padding_left="16"
                    padding_bottom="24"
-                   borderCornerRadius="12">
-    <text
-            width="match_parent"
-            height="32"
-            text="واحد ثبتی مورد نظر را انتخاب کنید"
-            gravity="center_right"
-            textsize="20"
-            textcolor="#2E2E2E"
-            textalignment="right"
-            margin_bottom="16"
-    />
+                   margin="0"
+                   background="white"
+                   borderCornerRadius="4" height="match_parent" width="match_parent">
 
-    <frame layout="linear_vertical">
-        <frame layout="linear_horizontal" padding_right="12" padding_left="12" padding_top="16" padding_bottom="16"
-               weightsum="1" reverse="true" borderColor="#E0E0E0"
-               borderCornerRadius="4" borderStrokeWidth="1" background="white">
-            <img width="24" height="24" scaleType="fit_xy" margin_right="10" src="images/search.png"/>
-            <textinput text="جستجو..." textcolor="#ADADAD" background="transparent"
-                       textalignment="right" gravity="right"  weight="1"/>
+    <frame height="match_parent" width="match_parent" layout="linear_vertical" scrollable="true" margin="0" padding="0">
+        <frame height="match_parent" width="match_parent" layout="linear_vertical" margin="0" padding="0">
+            <text
+                    width="match_parent"
+                    text="واحد ثبتی مورد نظر را انتخاب کنید"
+                    gravity="center_right"
+                    textsize="14"
+                    textcolor="#2E2E2E"
+                    textalignment="right"
+                    margin_bottom="16"
+            />
+
+            <frame layout="linear_vertical" margin="0" padding="0" scrollable="true">
+                <frame layout="linear_horizontal" padding_right="6" padding_left="6" padding_top="8" padding_bottom="8"
+                       weightsum="1" reverse="true" borderColor="#E0E0E0"
+                       borderCornerRadius="2" borderStrokeWidth="0.5" background="white">
+                    <img width="24" height="24" scaleType="fit_center" margin_right="8" src="images/search.png"/>
+                    <textinput textsize="12" hint="جستجو..." textcolor="#ADADAD" background="transparent"
+                               textalignment="right" gravity="right"  weight="1"/>
+                </frame>
+            </frame>
+
+
         </frame>
+
+        <frame layout="linear_vertical" margin="0" padding="0" margin_top="16">
+
+            <text textcolor="#616161" height="28" textsize="12" width="match_parent" margin_top="16" margin_bottom="16" gravity="right" textalignment="right" text="حوزه ثبت ملک آذرشهر" onclick="app/result:{text: 'حوزه ثبت ملک آذرشهر'};app/closeDialog"/>
+            <divider color="#E0E0E0" size="1" />
+            <text textcolor="#616161" height="28" textsize="12" width="match_parent" margin_top="16" margin_bottom="16" gravity="right" textalignment="right" text="حوزه ثبت ملک اهر" onclick="app/result:{text: 'حوزه ثبت ملک اهر'};app/closeDialog"/>
+            <divider color="#E0E0E0" size="1" />
+            <text textcolor="#616161" height="28" textsize="12" width="match_parent" margin_top="16" margin_bottom="16" gravity="right" textalignment="right" text="حوزه ثبت ملک ایلخچی" onclick="app/result:{text: 'حوزه ثبت ملک ایلخچی'};app/closeDialog"/>
+            <divider color="#E0E0E0" size="1" />
+            <text textcolor="#616161" height="28" textsize="12" width="match_parent" margin_top="16" margin_bottom="16" gravity="right" textalignment="right" text="حوزه ثبت ملک اسکو" onclick="app/result:{text: 'حوزه ثبت ملک اسکو'};app/closeDialog"/>
+
+        </frame>
+
     </frame>
-
-
-    <text height="28" width="match_parent" margin_top="16" margin_bottom="16" gravity="right" textalignment="right" text="حوزه ثبت ملک آذرشهر" onclick="app/result:{text: 'حوزه ثبت ملک آذرشهر'};app/closeDialog"/>
-    <text height="28" width="match_parent" margin_top="16" margin_bottom="16" gravity="right" textalignment="right" text="حوزه ثبت ملک اهر" onclick="app/result:{text: 'حوزه ثبت ملک اهر'};app/closeDialog"/>
-    <text height="28" width="match_parent" margin_top="16" margin_bottom="16" gravity="right" textalignment="right" text="حوزه ثبت ملک ایلخچی" onclick="app/result:{text: 'حوزه ثبت ملک ایلخچی'};app/closeDialog"/>
-    <text height="28" width="match_parent" margin_top="16" margin_bottom="16" gravity="right" textalignment="right" text="حوزه ثبت ملک اسکو" onclick="app/result:{text: 'حوزه ثبت ملک اسکو'};app/closeDialog"/>
 </bottomsheetdialog>

@@ -1,32 +1,48 @@
-<page title="" layout="linear_vertical">
+<page title="s" layout="linear_vertical" background="#FAFAFA" scrollable="false" height="match_parent"
+      gravity="top_center" padding="16" margin="0">
 
-    <frame weightsum="1" layout="linear_horizontal" gravity="center" reverse="true" margin="16"
-           background="white" elevation="2" borderCornerRadius="2">
-        <img width="40" height="40" scaleType="center_inside" src="images/tasdigh.png"/>
-        <text width="wrap_content" textsize="16" weight="1" textcolor="#1C4B78" padding_bottom="4" margin_right="8" textalignment="right" text="تصدیق اصالت سند"/>
-        <img width="25" height="25" margin_left="16" scaleType="center_inside" src="images/alert-circle.png"/>
+    <frame weightsum="1" layout="linear_horizontal" gravity="center" reverse="true" margin="0"
+           background="white" elevation="2" borderCornerRadius="4" padding="16">
 
+        <img width="40" height="40" scaleType="fit_center" src="images/tasdigh.png" gravity="top_center"
+             selfgravity="top_center"/>
+
+        <frame layout="linear_vertical" margin="0" padding="0" weight="1" gravity="center_right"
+               selfgravity="center_right" height="match_parent" margin_right="8">
+
+            <text width="wrap_content" textsize="16" textcolor="#1C4B78" margin_bottom="2"
+                  textalignment="right" text="تصدیق اصالت سند" margin="0" padding="0"/>
+
+            <text width="wrap_content" textsize="10" textcolor="#7A7A7A"
+                  textalignment="right" text="املاک و کاداستر/  تصدیق اصالت سند" margin="0" padding="0"/>
+        </frame>
+        <img width="24" height="24" margin_left="16" scaleType="fit_center" src="images/alert-circle.png" gravity="top_center"
+             selfgravity="top_center"/>
     </frame>
 
-    <text margin_right="16" margin_left="16" margin_top="24" margin_bottom="24" textalignment="right" text="نوع سند مورد نظر را انتخاب کنید"/>
+    <frame layout="linear_vertical" margin="0" padding="0">
+        <text textcolor="#2E2E2E" textsize="16" margin_top="24" margin_bottom="24" textalignment="right" text="نوع سند مورد نظر را انتخاب کنید"/>
+        <frame layout="linear_vertical" margin="0" padding="0">
+            <frame weightsum="1" layout="linear_horizontal" gravity="center" reverse="true"
+                   margin_bottom="12" margin_top="12" onclick="page/melk"
+                   background="white" elevation="1" borderCornerRadius="4" padding="16">
 
+                <img width="40" height="40" margin="0" padding="0" scaleType="fit_center" src="images/item_icon.png"/>
+                <text width="wrap_content" weight="1" textsize="12" textcolor="#616161" margin_right="16" textalignment="right" text="ملک"/>
+                <img width="24" height="24" margin="0" padding="0" scaleType="fit_center" src="images/chevron-down.png"/>
 
-    <frame weightsum="1" layout="linear_horizontal" gravity="center" reverse="true" margin_right="16" margin_left="16"
-           margin_top="12" margin_bottom="12" onclick="page/melk-form"
-           background="white" elevation="1" borderCornerRadius="2">
-        <img width="40" height="40" margin_right="16" scaleType="center_inside" src="images/service-icon-user.png"/>
-        <text width="wrap_content" weight="1" textsize="14" textcolor="#616161" padding_bottom="4" margin_right="8" textalignment="right" text="ملک"/>
-        <img width="25" height="25" scaleType="center_inside" src="images/chevron-left.png"/>
+            </frame>
 
-    </frame>
+            <frame weightsum="1" layout="linear_horizontal" gravity="center" reverse="true"
+                   margin_bottom="12" onclick="page/daftar-form"
+                   background="white" elevation="1" borderCornerRadius="4" padding="16">
 
-    <frame weightsum="1" layout="linear_horizontal" gravity="center" reverse="true" margin_right="16" margin_left="16"
-           margin_top="12" margin_bottom="12" onclick="page/daftar-form"
-           background="white" elevation="1" borderCornerRadius="2">
-        <img width="40" height="40" margin_right="16" scaleType="center_inside" src="images/tasdigh.png"/>
-        <text width="wrap_content" weight="1" textsize="14" textcolor="#616161" padding_bottom="4" margin_right="8" textalignment="right" text="اسناد اوراق دفاتر رسمی"/>
-        <img width="25" height="25" scaleType="center_inside" src="images/chevron-left.png"/>
+                <img width="40" height="40" margin="0" padding="0" scaleType="fit_center" src="images/item_icon.png"/>
+                <text width="wrap_content" weight="1" textsize="12" textcolor="#616161" padding_bottom="4" margin_right="16" textalignment="right" text="اسناد اوراق دفاتر رسمی"/>
+                <img width="24" height="24" margin="0" padding="0" scaleType="fit_center" src="images/chevron-down.png"/>
 
+            </frame>
+        </frame>
     </frame>
 </page>
 

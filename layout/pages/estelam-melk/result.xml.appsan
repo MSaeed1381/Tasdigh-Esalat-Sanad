@@ -1,149 +1,264 @@
-<page id="result" scrollable="true" height="match_parent">
-    <frame layout="frame" width="match_parent" gravity="right">
-        <imagebutton width="24" height="24" selfgravity="right" background="#4ca9bf" src="images/x.png"
-        onclick="app/back"/>
+<page title="" id="result" scrollable="false" height="match_parent" background="#FAFAFA">
+    <script id="detail">
+        let counter = {}
+
+        function closeCard(img_id, content_id) {
+            if (!(img_id in counter)) {
+                counter[img_id] = 0;
+            } else {
+                counter[img_id] = counter[img_id] + 1
+            }
+            console.log(counter)
+
+            if ( counter[img_id] % 2 === 0 ) {
+                Appsan.setProperty(img_id, 'src', 'images/chevron-down.png');
+                Appsan.setProperty(content_id, 'visibility', 'gone');
+
+            } else {
+                Appsan.setProperty(img_id, 'src', 'images/chevron-up.png');
+                Appsan.setProperty(content_id, 'visibility', 'visible');
+            }
+
+        }
+
+
+    </script>
+
+    <frame layout="linear_vertical" margin="0" padding="16" height="match_parent"
+           gravity="top_center" selfgravity="top_center">
+
+        <frame weightsum="1" layout="linear_horizontal" gravity="center" reverse="true" margin="0"
+               background="white" elevation="2" borderCornerRadius="4" padding="16">
+
+            <img width="40" height="40" scaleType="fit_center" src="images/tasdigh.png" gravity="top_center"
+                 selfgravity="top_center"/>
+
+            <frame layout="linear_vertical" margin="0" padding="0" weight="1" gravity="center_right"
+                   selfgravity="center_right" height="match_parent" margin_right="8">
+
+                <text width="wrap_content" textsize="16" textcolor="#1C4B78" margin_bottom="2"
+                      textalignment="right" text="تصدیق اصالت سند" margin="0" padding="0"/>
+
+                <text width="wrap_content" textsize="10" textcolor="#7A7A7A"
+                      textalignment="right" text="املاک و کاداستر/  تصدیق اصالت سند" margin="0" padding="0"/>
+            </frame>
+            <img width="24" height="24" margin_left="16" scaleType="fit_center" src="images/alert-circle.png" gravity="top_center"
+                 selfgravity="top_center"/>
+        </frame>
+
+        <frame height="match_parent" layout="linear_vertical" margin="0" padding="0" background="#FAFAFA" scrollable="true"
+               layoutgravity="top_center" gravity="top" >
+
+            <text margin_top="24" margin_bottom="24" margin="0" padding="0"
+                  textsize="16" textcolor="#2E2E2E" textalignment="right" text="تصدیق اصالت سند و اوراق دفاتر رسمی"/>
+
+            <frame layout="linear_vertical" borderStrokeWidth="0.5" borderColor="#E0E0E0" margin="0" padding="16"
+                   borderCornerRadius="4" background="white" childgravity="right" selfgravity="right">
+
+                <frame layout="linear_horizontal" weightsum="1" padding="0" reverse="true" margin="0">
+                    <text gravity="right" textalignment="right" text="مشخصات سند" width="wrap_content" weight="1"
+                          textcolor="#474747" textsize="16" margin="0" padding="0"/>
+                    <img id="img1" width="24" height="24" scaleType="fit_center" margin="0" padding="0"
+                         src="images/chevron-down.png" onclick="script/detail:closeCard('img1', 'cnt1')"/>
+                </frame>
+
+                <frame id="cnt1" layout="linear_vertical" visibility="gone" width="match_parent"
+                       height="wrap_content" gravity="right" margin="0" padding="0">
+
+                    <frame layout="linear_vertical" height="match_parent" weight="1" gravity="right" margin="0" padding="0" margin_top="16">
+                        <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                              textcolor="#616161" textsize="14" text="شناسه یکتا:" margin="0" padding="0"/>
+                        <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                              textcolor="#2E2E2E" textsize="14" text="۱۳۹۵۹۳۲۵۱۱۲۱۰۰۰۰۳۹" margin="0" padding="0" />
+                    </frame>
+
+                    <frame layout="linear_vertical" height="match_parent" weight="1" gravity="right" margin="0" padding="0" margin_top="16">
+                        <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                              textcolor="#616161" textsize="14" text="نوع سند:" margin="0" padding="0"/>
+                        <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                              textcolor="#2E2E2E" textsize="14" text="سند وکالت نامه" margin="0" padding="0"/>
+                    </frame>
+
+                    <frame layout="linear_vertical" height="match_parent" weight="1" gravity="right" margin="0" padding="0" margin_top="16">
+                        <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right" margin="0" padding="0"
+                              textcolor="#616161" textsize="14" text="تاریخ سند:"/>
+                        <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right" margin="0" padding="0"
+                              textcolor="#2E2E2E" textsize="14" text="۱۳۹۵/۰۹/۲۰" />
+                    </frame>
+
+                    <frame layout="linear_vertical" height="match_parent" weight="1" gravity="right" margin="0" padding="0" margin_top="16">
+                        <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right" margin="0" padding="0"
+                              textcolor="#616161" textsize="14" text="شماره ثبت دفتر:"/>
+                        <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right" margin="0" padding="0"
+                              textcolor="#2E2E2E" textsize="14" text="۱۲۳۴۵۶" />
+                    </frame>
+
+                    <frame layout="linear_vertical" height="match_parent" weight="1" gravity="right" margin="0" padding="0" margin_top="16">
+                        <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                              textcolor="#616161" textsize="14" text="دفترخانه تنظیم کننده:" margin="0" padding="0"/>
+                        <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                              textcolor="#2E2E2E" textsize="14" text="دفترخانه  ۱۴۸ شهر  تبریز آذزبایجان شرقی" margin="0" padding="0" />
+                    </frame>
+
+                </frame>
+            </frame>
+
+            <frame layout="linear_vertical" borderStrokeWidth="0.5" borderColor="#E0E0E0" background="white"
+                   borderCornerRadius="4" margin="0" padding="16" margin_top="12">
+                <frame layout="linear_horizontal" weightsum="1" reverse="true"  padding="0" margin="0">
+                    <text gravity="right" textalignment="right" text="افراد" width="wrap_content" weight="1"
+                          textcolor="#474747" textsize="16" margin="0" padding="0"/>
+                    <img id="img2" width="24" height="24" scaleType="fit_center" margin="0" padding="0"
+                         src="images/chevron-down.png" onclick="script/detail:closeCard('img2', 'cnt2')"/>
+                </frame>
+                <frame id="cnt2" visibility="gone" layout="linear_vertical" margin="0" padding="0">
+                    <frame layout="linear_vertical" height="match_parent" weight="1" gravity="right" margin="0" padding="0" margin_top="16">
+                        <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                              textcolor="#616161" textsize="14" text="نام و نام خانوادگی موکل:" margin="0" padding="0"/>
+                        <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                              textcolor="#2E2E2E" textsize="14" text="مسعود امجدی" margin="0" padding="0" />
+                    </frame>
+
+                    <frame layout="linear_vertical" height="match_parent" weight="1" gravity="right" margin="0" padding="0" margin_top="16">
+                        <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                              textcolor="#616161" textsize="14" text="کد ملی موکل:" margin="0" padding="0"/>
+                        <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                              textcolor="#2E2E2E" textsize="14" text="۱۵۴۹۱۸۶۵۳۶" margin="0" padding="0"/>
+                    </frame>
+
+                    <frame layout="linear_vertical" height="match_parent" weight="1" gravity="right" margin="0" padding="0" margin_top="16">
+                        <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right" margin="0" padding="0"
+                              textcolor="#616161" textsize="14" text="نام و نام خانوادگی وکیل:"/>
+                        <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right" margin="0" padding="0"
+                              textcolor="#2E2E2E" textsize="14" text="داور امجدی" />
+                    </frame>
+
+                    <frame layout="linear_vertical" height="match_parent" weight="1" gravity="right" margin="0" padding="0" margin_top="16">
+                        <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right" margin="0" padding="0"
+                              textcolor="#616161" textsize="14" text="کد ملی وکیل:"/>
+                        <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right" margin="0" padding="0"
+                              textcolor="#2E2E2E" textsize="14" text="۱۵۶۸۱۷۹۳۵۲" />
+                    </frame>
+
+                    <frame layout="linear_vertical" height="match_parent" weight="1" gravity="right" margin="0" padding="0" margin_top="16">
+                        <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                              textcolor="#616161" textsize="14" text="نام و نام  خانوادگی موکل:" margin="0" padding="0"/>
+                        <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                              textcolor="#2E2E2E" textsize="14" text="نیلوفر سلطانی" margin="0" padding="0" />
+                    </frame>
+
+                    <frame layout="linear_vertical" height="match_parent" weight="1" gravity="right" margin="0" padding="0" margin_top="16">
+                        <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                              textcolor="#616161" textsize="14" text="کد ملی موکل:" margin="0" padding="0"/>
+                        <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
+                              textcolor="#2E2E2E" textsize="14" text="۱۷۶۰۲۷۸۵۴۶" margin="0" padding="0" />
+                    </frame>
+                </frame>
+            </frame>
+
+
+            <frame layout="linear_vertical" borderStrokeWidth="0.5" borderColor="#E0E0E0" background="white"
+                   borderCornerRadius="4" margin="0" padding="16" margin_top="12">
+                <frame layout="linear_horizontal" weightsum="1" reverse="true"  padding="0" margin="0">
+                    <text gravity="right" textalignment="right" text="سند" width="wrap_content" weight="1"
+                          textcolor="#474747" textsize="16" margin="0" padding="0"/>
+                    <img id="img3" width="24" height="24" scaleType="fit_center" margin="0" padding="0"
+                         src="images/chevron-down.png" onclick="script/detail:closeCard('img3', 'cnt3')"/>
+                </frame>
+                <frame id="cnt3" visibility="gone" layout="linear_vertical" margin="0" padding="0">
+                    <text textstyle="normal" text="دفترخانه ۲۲ تبریز" margin="0" padding="0" textsize="14"
+                          textcolor="#616161" margin_bottom="16" margin_top="24" />
+
+                    <frame layout="linear_horizontal" margin="0" padding="0" reverse="true" gravity="right"
+                           selfgravity="right" weightsum="3" margin_bottom="16">
+                        <frame layout="linear_vertical" margin="0" padding="0" width="wrap_content" gravity="right" weight="1"
+                               selfgravity="right" padding_left="16" childgravity="right">
+                            <text textstyle="normal" text="نوع سند" margin="0" padding="0" textsize="14" margin_bottom="8"
+                                  textcolor="#616161" textalignment="right" />
+
+                            <text textstyle="normal" text="سند وکالت نامه" margin="0" padding="0" textsize="14"
+                                  textcolor="#2E2E2E" textalignment="right" />
+                        </frame>
+
+                        <frame layout="linear_vertical" margin="0" padding="0" width="wrap_content" gravity="right" weight="1"
+                               selfgravity="right" padding_left="16" childgravity="right">
+
+                            <text textstyle="normal" text="تاریخ سند" margin="0" padding="0" textsize="14" margin_bottom="8"
+                                  textcolor="#616161" textalignment="right" />
+
+                            <text textstyle="normal" text="۱۳۹۸/۰۱۲/۲۴" margin="0" padding="0" textsize="14"
+                                  textcolor="#2E2E2E" textalignment="right" />
+                        </frame>
+
+                        <frame layout="linear_vertical" margin="0" padding="0" width="wrap_content" weight="1"
+                               gravity="right" selfgravity="right" childgravity="right">
+
+                            <text textstyle="normal" text="شماره سند" margin="0" padding="0" textsize="14" margin_bottom="8"
+                                  textcolor="#616161" textalignment="right" />
+
+                            <text textstyle="normal" text="۱۲۳۴۵" margin="0" padding="0" textsize="14"
+                                  textcolor="#2E2E2E" textalignment="right" />
+                        </frame>
+                    </frame>
+
+                    <divider color="#E0E0E0" size="1"/>
+
+                    <frame layout="linear_horizontal" margin="0" padding="0" reverse="true" gravity="right"
+                           selfgravity="right" weightsum="3" margin_top="16" margin_bottom="16">
+                        <frame layout="linear_vertical" margin="0" padding="0" width="wrap_content" gravity="right" weight="1"
+                               selfgravity="right" padding_left="16" childgravity="right">
+                            <text textstyle="normal" text="وکیل" margin="0" padding="0" textsize="14" margin_bottom="8"
+                                  textcolor="#616161" textalignment="right" />
+
+                            <text textstyle="normal" text="داور امجدی" margin="0" padding="0" textsize="14"
+                                  textcolor="#2E2E2E" textalignment="right" />
+                        </frame>
+
+                        <frame layout="linear_vertical" margin="0" padding="0" width="wrap_content" gravity="right" weight="1"
+                               selfgravity="right" padding_left="16" childgravity="right">
+
+                            <text textstyle="normal" text="موکل" margin="0" padding="0" textsize="14" margin_bottom="8"
+                                  textcolor="#616161" textalignment="right" />
+
+                            <text textstyle="normal" text="نیلوفر سلطانی" margin="0" padding="0" textsize="14"
+                                  textcolor="#2E2E2E" textalignment="right" />
+                        </frame>
+
+                        <frame layout="linear_vertical" margin="0" padding="0" width="wrap_content" weight="1"
+                               gravity="right" selfgravity="right" childgravity="right">
+
+                            <text textstyle="normal" text="موکل" margin="0" padding="0" textsize="14" margin_bottom="8"
+                                  textcolor="#616161" textalignment="right" />
+
+                            <text textstyle="normal" text="مسعود امجدی" margin="0" padding="0" textsize="14"
+                                  textcolor="#2E2E2E" textalignment="right" />
+                        </frame>
+                    </frame>
+
+                    <divider color="#E0E0E0" size="1"/>
+
+                    <frame layout="linear_vertical" margin="0" padding="0" margin_top="16" margin_bottom="16" >
+                        <text textstyle="normal" textcolor="#2E2E2E" textsize="14" text="این وکالت نامه بلاعزل نیست"
+                              margin="0" padding="0" />
+
+                        <text textstyle="normal" textcolor="#2E2E2E" textsize="14" text="وکیل حق توکیل به غیر دارد"
+                              margin="0" padding="0" margin_top="8" margin_bottom="8" />
+
+                        <text textstyle="normal" textcolor="#2E2E2E" textsize="14" text="این وکالت مدت دار نیست"
+                              margin="0" padding="0" />
+                    </frame>
+                    <divider color="#E0E0E0" size="1"/>
+
+                    <frame layout="linear_vertical" margin="0" padding="0" margin_top="16" margin_bottom="16" >
+                        <text margin="0" padding="0" textsize="14" textstyle="normal" textcolor="#616161" text="متن سند" />
+                        <text margin="0" padding="0" textsize="14" textstyle="normal" textcolor="#2E2E2E" text="موارد وكالت : 1) انجام هر گونه معامله و انعقاد قرارداد تحت هر يك از عناوين حقوقي اعم از عقود معين يا غيرمعين ولو به استناد ماده 10 قانون مدني از طرف موكل من جمله خريد، فروش و مصالحه (معوض يا بلاعوض) هر نوع ملك اعم از خانه زمين آپارتمان مغازه..." />
+                    </frame>
+                </frame>
+            </frame>
+        </frame>
+
     </frame>
-    <text text="استعلام" gravity="right" textsize="20" textcolor="#2E2E2E"/>
-
-    <frame layout="linear_vertical"  borderStrokeWidth="1" borderColor="#E0E0E0"
-           borderCornerRadius="6">
-            <frame layout="linear_horizontal" height="wrap_content" weightsum="1" reverse="true">
-                <text gravity="right" height="wrap_content" textalignment="right" text="مشخصات مالک" width="wrap_content" weight="1"
-                      textcolor="#474747" textsize="16"/>
-                <imagebutton width="24" height="24" src="images/chevron-down.png"/>
-            </frame>
-
-            <frame margin_top="12" layout="linear_horizontal" height="wrap_content" weightsum="2" reverse="true">
-
-                <frame margin_top="12" width="wrap_content" weight="1" childgravity="right" layout="linear_vertical">
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                          textcolor="#616161" textsize="14" text="نام:"/>
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                          textcolor="#2E2E2E" textsize="14" text="داور" />
-
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                          textcolor="#616161" textsize="14" text="نام پدر" margin_top="16"/>
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                          textcolor="#2E2E2E" textsize="14" text="حسن" />
-
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                          textcolor="#616161" textsize="14" text="شماره شناسنامه:" margin_top="16"/>
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                          textcolor="#2E2E2E" textsize="14" text="۱۵۰۱۱۴۲۴۲" />
-
-                </frame>
-
-                <frame margin_top="12" width="wrap_content" weight="1" layout="linear_vertical" height="wrap_content" gravity="top_right">
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                          textcolor="#616161" textsize="14" text="نام خانوادگی:"/>
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                    textcolor="#2E2E2E" textsize="14" text="امجدی"/>
-
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right" margin_top="16"
-                          textcolor="#616161" textsize="14" text="کدملی:"/>
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                    textcolor="#2E2E2E" textsize="14" text="۱۵۰۱۱۴۲۴۲"/>
-
-                </frame>
-            </frame>
-    </frame>
 
 
-    <frame layout="linear_vertical"  borderStrokeWidth="1" borderColor="#E0E0E0"
-           borderCornerRadius="6">
-            <frame layout="linear_horizontal" weightsum="1" reverse="true">
-                <text gravity="right" textalignment="right" text="مشخصات ملک" width="wrap_content" weight="1"
-                      textcolor="#474747" textsize="16"/>
-                <imagebutton width="24" height="24" src="images/chevron-down.png"/>
-            </frame>
 
-            <frame margin_top="12" height="wrap_content" layout="linear_horizontal" weightsum="2" reverse="true">
-
-                <frame margin_top="12" weight="1" width="wrap_content" childgravity="right" layout="linear_vertical">
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                          textcolor="#616161" textsize="14" text="شماره فرعی:"/>
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                          textcolor="#2E2E2E" textsize="14" text="۱۲۳" />
-
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                          textcolor="#616161" textsize="14" text="مفروز و مجزا از:" margin_top="16"/>
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                          textcolor="#2E2E2E" textsize="14" text="-----" />
-
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                          textcolor="#616161" textsize="14" text="بخش ثبتی:" margin_top="16"/>
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                          textcolor="#2E2E2E" textsize="14" text="-----" />
-
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                          textcolor="#616161" textsize="14" text="مساحت:" margin_top="16"/>
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                          textcolor="#2E2E2E" textsize="14" text="-----" />
-
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                          textcolor="#616161" textsize="14" text="سمت:" margin_top="16"/>
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                          textcolor="#2E2E2E" textsize="14" text="-----" />
-
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                          textcolor="#616161" textsize="14" text="بها:" margin_top="16"/>
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                          textcolor="#2E2E2E" textsize="14" text="-----" />
-
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                          textcolor="#616161" textsize="14" text="وضعیت خاص:" margin_top="16"/>
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                          textcolor="#2E2E2E" textsize="14" text="-----" />
-
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                          textcolor="#616161" textsize="14" text="نوع سند:" margin_top="16"/>
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                          textcolor="#2E2E2E" textsize="14" text="-----" />
-
-                </frame>
-
-                <frame margin_top="12" weight="1" width="wrap_content" layout="linear_vertical" gravity="top_right">
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                          textcolor="#616161" textsize="14" text="شماره اصلی:"/>
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                    textcolor="#2E2E2E" textsize="14" text="۱۳۹۵۹۳۲۵۱۱۲۱۰۰۰۰۳۹"/>
-
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right" margin_top="16"
-                          textcolor="#616161" textsize="14" text="قطعه:"/>
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                    textcolor="#2E2E2E" textsize="14" text="-----"/>
-
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right" margin_top="16"
-                          textcolor="#616161" textsize="14" text="ناحیه:"/>
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                    textcolor="#2E2E2E" textsize="14" text="-----"/>
-
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right" margin_top="16"
-                          textcolor="#616161" textsize="14" text="بلوک:"/>
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                    textcolor="#2E2E2E" textsize="14" text="-----"/>
-
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right" margin_top="16"
-                          textcolor="#616161" textsize="14" text="طبقه:"/>
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                    textcolor="#2E2E2E" textsize="14" text="۲"/>
-
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right" margin_top="16"
-                          textcolor="#616161" textsize="14" text="نوع ملک:"/>
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                    textcolor="#2E2E2E" textsize="14" text="-----"/>
-
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right" margin_top="16"
-                          textcolor="#616161" textsize="14" text="کاربری:"/>
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                    textcolor="#2E2E2E" textsize="14" text="-----"/>
-
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right" margin_top="16"
-                          textcolor="#616161" textsize="14" text="محدودیت:"/>
-                    <text height="wrap_content" width="wrap_content" gravity="right" textalignment="right"
-                    textcolor="#2E2E2E" textsize="14" text="رهنی"/>
-
-                </frame>
-            </frame>
-    </frame>
 </page>

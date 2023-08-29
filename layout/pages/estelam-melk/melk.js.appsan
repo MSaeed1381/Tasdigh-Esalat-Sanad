@@ -1,6 +1,6 @@
 <script id="melk-script">
     function updateOstan(data) {
-        console.log(data)
+        console.log(data.text)
         Appsan.setProperty("txtOstan", "text", data.text)
         Appsan.setProperty("txtOstan", "textcolor", 'black')
     }

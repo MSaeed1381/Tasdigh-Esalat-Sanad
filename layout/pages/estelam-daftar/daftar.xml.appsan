@@ -1,50 +1,83 @@
-<page id="daftar-form" layout="linear_vertical">
-
-    <frame weightsum="1" layout="linear_horizontal" gravity="center" reverse="true" margin="16"
-           background="white" elevation="2" borderCornerRadius="2">
-        <img width="40" height="40" scaleType="center_inside" src="images/tasdigh.png"/>
-        <text width="wrap_content" textsize="16" weight="1" textcolor="#1C4B78" padding_bottom="4" margin_right="8"
-              textalignment="right" text="تصدیق اصالت سند"/>
-        <img width="25" height="25" margin_left="16" scaleType="center_inside" src="images/alert-circle.png"/>
-
-    </frame>
-
-    <text margin_right="16" margin_left="16" margin_top="24" margin_bottom="24"
-          textsize="16" textcolor="#2E2E2E" textalignment="right" text="مشخصات سند"/>
+<page title="dafter" id="daftar-form" layout="linear_vertical" background="#FAFAFA" scrollable="false" height="match_parent" width="match_parent">
+    <include layout="pages/estelam-melk/melk.js.appsan"/>
 
 
-    <text margin_right="16" margin_left="16" margin_bottom="16"
-          textalignment="right" textsize="14" textcolor="#616161" text="برای مشاهده سند، شناسه سند و رمز تصدیق را وارد نمایید"/>
+    <frame layout="linear_vertical" margin="0" padding="0" weightsum="1" height="match_parent">
+        <frame layout="linear_vertical" margin="0" weight="1" padding_top="0" padding_right="16" padding_left="16" padding_bottom="16" height="match_parent" weightsum="1">
+            <frame weightsum="1" layout="linear_horizontal" gravity="center" reverse="true" margin="0"
+                   background="white" elevation="2" borderCornerRadius="4" padding="16">
+
+                <img width="40" height="40" scaleType="fit_center" src="images/tasdigh.png" gravity="top_center"
+                     selfgravity="top_center"/>
+
+                <frame layout="linear_vertical" margin="0" padding="0" weight="1" gravity="center_right"
+                       selfgravity="center_right" height="match_parent" margin_right="8">
+
+                    <text width="wrap_content" textsize="16" textcolor="#1C4B78" margin_bottom="2"
+                          textalignment="right" text="تصدیق اصالت سند" margin="0" padding="0"/>
+
+                    <text width="wrap_content" textsize="10" textcolor="#7A7A7A"
+                          textalignment="right" text="املاک و کاداستر/  تصدیق اصالت سند" margin="0" padding="0"/>
+                </frame>
+                <img width="24" height="24" margin_left="16" scaleType="fit_center" src="images/alert-circle.png" gravity="top_center"
+                     selfgravity="top_center"/>
+            </frame>
 
 
-    <frame layout="linear_vertical">
-        <text textsize="14" textcolor="#7A7A7A" textalignment="right" gravity="right"
-              textstyle="bold" text="شناسه ی سند"/>
-        <frame layout="linear_horizontal" padding_right="12" padding_left="12"
-               weightsum="1" reverse="true" borderColor="#E0E0E0" height="60"
-               gravity="center_vertical" childgravity="center_vertical"
-               borderCornerRadius="4" borderStrokeWidth="1" background="white">
-            <textinput text="شناسه ی سند مورد نظر  را وارد کنید" textcolor="#ADADAD" background="transparent"
-                       textalignment="right" gravity="right"  weight="1" margin="0"/>
+            <frame layout="linear_vertical" margin="0" padding="0" scrollable="true" weight="1" height="match_parent"
+            >
+                <text textcolor="#2E2E2E" textsize="16" margin_top="24" margin_bottom="24" margin="0" padding="0"
+                      textalignment="right" text="استعلام"/>
+
+                <text margin_bottom="16" margin="0" padding="0" textstyle="normal"
+                      textalignment="right" textsize="12" textcolor="#616161" text="برای مشاهده سند، شناسه سند و رمز تصدیق را وارد نمایید"/>
+
+
+
+                <frame layout="linear_vertical" margin="0" padding="0">
+                    <frame layout="linear_vertical" margin="0" padding="0">
+                        <text textsize="14" textcolor="#7A7A7A" textalignment="right" gravity="right" margin="0" padding="0"
+                              text="شناسه ی سند" margin_bottom="8"/>
+                        <frame layout="linear_horizontal" margin="0"
+                               weightsum="1" reverse="true" borderColor="#E0E0E0" height="wrap_content"
+                               gravity="center_vertical" childgravity="center_vertical"
+                               padding_top="16" padding_bottom="16" padding_left="12" padding_right="12"
+                               borderCornerRadius="4" borderStrokeWidth="1" background="white">
+
+                            <textinput hint="شناسه ی سند مورد نظر  را وارد کنید" hintcolor="#ADADAD" textcolor="black" background="transparent" inputtype="number"
+                                       textalignment="right" gravity="right"  weight="1" margin="0" textsize="12" borderStrokeWidth="0.5"/>
+                        </frame>
+                    </frame>
+
+
+                    <frame layout="linear_vertical" margin="0" padding="0" margin_top="16">
+                        <text textsize="14" textcolor="#7A7A7A" textalignment="right" gravity="right"
+                              text="رمز تصدیق" margin_bottom="8" margin="0" padding="0"/>
+                        <frame layout="linear_horizontal" padding="0" margin="0"
+                               weightsum="1" reverse="true" borderColor="#E0E0E0" height="wrap_content"
+                               gravity="center_vertical" childgravity="center_vertical"
+                               padding_top="16" padding_bottom="16" padding_left="12" padding_right="12"
+                               borderCornerRadius="4" borderStrokeWidth="1" background="white">
+
+                            <img src="images/lock.png" height="24" width="24" scaleType="fit_center" margin_left="10"/>
+
+                            <textinput padding="0" hint="رمز تصدیق مورد نظر  را وارد کنید" textcolor="black" hintcolor="#ADADAD" background="transparent" inputtype="number_password"
+                                       textalignment="right" gravity="right"  weight="1" margin="0" textsize="12" borderCornerRadius="0.5"/>
+                        </frame>
+                    </frame>
+
+
+                </frame>
+            </frame>
+        </frame>
+
+        <frame layout="frame" margin="0" padding="16" background="white">
+            <button height="wrap_content" onclick="page/result" textsize="14"
+                    width="match_parent" text="جستجو" textcolor="white" background="#4ca9bf"
+                    borderCornerRadius="4" gravity="center" selfgravity="center"/>
         </frame>
     </frame>
 
 
-    <frame layout="linear_vertical">
-        <text textsize="14" textcolor="#7A7A7A" textalignment="right" gravity="right"
-              textstyle="bold" text="رمز تصدیق"/>
-        <frame layout="linear_horizontal" padding_right="12" padding_left="12"
-               weightsum="1" reverse="true" borderColor="#E0E0E0" height="60"
-               gravity="center_vertical" childgravity="center_vertical"
-               borderCornerRadius="4" borderStrokeWidth="1" background="white">
-            <img src="images/lock.png" height="24" width="24" margin_left="10"/>
 
-            <textinput text="رمز تصدیق مورد نظر  را وارد کنید" textcolor="#ADADAD" background="transparent"
-                       textalignment="right" gravity="right"  weight="1" margin="0"/>
-        </frame>
-    </frame>
-
-
-    <button height="48" margin_top="17" margin_right="10" margin_left="10" onclick="page/result"
-            width="match_parent" text="جستجو" textcolor="white" background="#4ca9bf"/>
 </page>
